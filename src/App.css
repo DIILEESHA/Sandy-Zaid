@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+}
+
+@font-face {
+  font-family: "bur";
+  src: url("../fonts/buruges.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ebg";
+  src: url("../fonts/ebg.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "lato";
+  src: url("../fonts/Lato-Regular.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "candle";
+  src: url("../fonts/candle.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
