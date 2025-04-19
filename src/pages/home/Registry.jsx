@@ -100,7 +100,13 @@ const Registry = () => {
             whileHover="hover"
             whileTap="tap"
           >
-            shop our registry
+            <a
+              href="https://registry.theknot.com/--june-2026-tx/72079552"
+              target="_blank"
+              className="a"
+            >
+              shop our registry
+            </a>
           </motion.button>
         </motion.div>
 

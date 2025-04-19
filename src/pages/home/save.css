@@ -1,10 +1,10 @@
 .save_container {
   position: relative;
-  background-image: url("../../assets/save.jpeg");
-  background-position: center;
+  background-image: url("../../assets/show.jpeg");
+  background-position: center 120%;
   height: 100vh;
   min-height: 130vh;
-overflow: hidden;
+  overflow: hidden;
   background-repeat: no-repeat;
 }
 
@@ -67,6 +67,7 @@ overflow: hidden;
 
 .names {
   font-family: "candle";
+  font-weight: 900;
   font-size: 50px;
 }
 

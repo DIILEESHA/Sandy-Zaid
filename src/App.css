@@ -11,6 +11,11 @@
   font-weight: normal;
   font-style: normal;
 }
+
+.a {
+  text-decoration: none;
+  color: inherit;
+}
 @font-face {
   font-family: "ebg";
   src: url("../fonts/ebg.ttf") format("opentype");

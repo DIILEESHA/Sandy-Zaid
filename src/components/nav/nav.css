@@ -1,0 +1,29 @@
+.nav_container {
+  padding: 5px 80px;
+  background-color: #f7f5f2;
+  color: #000;
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  z-index: 10000;
+  border-bottom: 2px solid #dfdada;
+}
+.logo {
+  width: 50px;
+}
+
+.nav_ul {
+  display: flex;
+  gap: 20px;
+}
+
+.nav_li {
+  font-family: "lato";
+  list-style: none;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #333;
+  cursor: pointer;
+}
