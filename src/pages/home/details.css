@@ -124,7 +124,7 @@
   }
 }
 @media screen and (max-width: 608px) {
-  .short {
+  .short ,.dallapatah{
     font-size: 30px;
     width: 100%;
   }
