@@ -76,10 +76,6 @@ const Details = () => {
       >
         <div className="detail_grid calap">
           <motion.div className="detail_sub_grid nalla " style={{ y: textY }}>
-            <motion.h2 className="doto sadanari" variants={itemVariants}>
-              Sandy & Zaid
-            </motion.h2>
-
             <motion.p className="dallapatah" variants={itemVariants}>
               We would be delighted to have you celebrate with us!
             </motion.p>

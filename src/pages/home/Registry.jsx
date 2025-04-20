@@ -82,9 +82,7 @@ const Registry = () => {
       >
         <div className="detail_grid malap">
           <motion.div className="detail_sub_grid nalla" style={{ y: textY }}>
-            <motion.h2 className="doto" variants={textVariants}>
-              Sandy & Zaid
-            </motion.h2>
+           
 
             <motion.p className="short" variants={textVariants}>
               Your Presence is the Best Present
