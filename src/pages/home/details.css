@@ -108,6 +108,10 @@
     padding: 50px 20px;
   }
 
+  .sadanari{
+    margin-top: 50px;
+  }
+
   .malap {
     display: flex;
     gap: 70px;
@@ -133,6 +137,11 @@
     font-size: 20px;
     margin-top: 20px;
     padding: 10px 20px;
+  }
+
+
+  .detail_img{
+    height: 40vh;
   }
 
   .other_p {

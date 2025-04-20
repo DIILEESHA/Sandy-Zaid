@@ -75,8 +75,8 @@ const Details = () => {
         style={{ opacity }}
       >
         <div className="detail_grid calap">
-          <motion.div className="detail_sub_grid nalla" style={{ y: textY }}>
-            <motion.h2 className="doto" variants={itemVariants}>
+          <motion.div className="detail_sub_grid nalla " style={{ y: textY }}>
+            <motion.h2 className="doto sadanari" variants={itemVariants}>
               Sandy & Zaid
             </motion.h2>
 

@@ -109,6 +109,9 @@
     font-size: 35px;
     width: 80%;
   }
+  .gallery_sub_con{
+    height: 30vh;
+  }
 
   .view_p {
     width: 90%;
