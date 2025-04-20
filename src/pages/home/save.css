@@ -84,6 +84,17 @@
     font-size: 40px;
     width: 80%;
   }
+
+  .save_container,
+  .home_section {
+    /* min-height: auto; */
+    /* height: auto; */
+  }
+  
+  .save_container{
+    /* padding: 20px; */
+
+  }
   .verse {
     font-size: 25px;
     width: 80%;
@@ -91,7 +102,7 @@
     margin: 10px auto;
   }
 
-  .invite_text{
+  .invite_text {
     width: 90%;
     margin: 40px auto;
   }

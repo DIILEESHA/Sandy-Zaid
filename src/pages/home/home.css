@@ -158,6 +158,10 @@
     font-size: 80px;
   }
 
+  .video{
+    height: 80vh;
+  }
+
   .menu {
     justify-content: flex-end;
     padding: 20px;
