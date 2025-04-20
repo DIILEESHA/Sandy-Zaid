@@ -102,7 +102,22 @@ const Gallery = () => {
         </Marquee>
       </motion.div>
 
-  
+      <p className="view_p" id="location">
+        The church ceremony, welcome drinks and dinner will take place at
+        <br />
+        <br />
+        <b>Pleine Lune venue, Faitroun, Lebanon</b>
+      </p>
+
+      <iframe
+      className="cccc"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.9657533311906!2d35.728635000000004!3d33.9934134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f4748a0567f7b%3A0x40d14c0d1273dcfc!2sPleine%20Lune!5e0!3m2!1sen!2slk!4v1745161204452!5m2!1sen!2slk"
+        style={{ width: "100%" }}
+        height="450"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </motion.div>
   );
 };

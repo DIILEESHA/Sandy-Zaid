@@ -53,6 +53,14 @@
   line-height: 150%;
 }
 
+.dallapatah{
+  font-family: "lato";
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 150%;
+}
+
 .detail_btn {
   width: fit-content;
   cursor: pointer;
@@ -99,7 +107,7 @@
     gap: 10px;
     padding: 50px 20px;
   }
-  
+
   .malap {
     display: flex;
     gap: 70px;
@@ -113,13 +121,21 @@
 }
 @media screen and (max-width: 608px) {
   .short {
-    font-size: 35px;
+    font-size: 30px;
     width: 100%;
+  }
+
+  .doto {
+    font-size: 24px;
   }
 
   .detail_btn {
     font-size: 20px;
     margin-top: 20px;
     padding: 10px 20px;
+  }
+
+  .other_p {
+    font-size: 18px;
   }
 }

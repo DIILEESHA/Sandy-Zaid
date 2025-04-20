@@ -38,6 +38,8 @@
 .couple_name_section {
   display: flex;
   gap: 40px;
+  justify-content: center;
+  width: 100%;
   align-items: center;
 }
 
@@ -50,7 +52,7 @@
 }
 
 .austin {
-  font-family: "ebg";
+  font-family: "lato";
 }
 
 /* Menu Styles */
@@ -155,7 +157,7 @@
 /* Responsive Styles */
 @media screen and (max-width: 880px) {
   .couple_name {
-    font-size: 80px;
+    font-size: 50px;
   }
 
   .video {
@@ -170,7 +172,7 @@
 
 @media screen and (max-width: 550px) {
   .couple_name {
-    font-size: 50px;
+    font-size: 30px;
   }
 
   /* Hide desktop menu on mobile */

@@ -2,6 +2,8 @@ import React from "react";
 import { color, motion, useScroll, useTransform } from "framer-motion";
 import "./details.css";
 import detail from "../../assets/detail.jpeg";
+import { div } from "framer-motion/client";
+import { Link } from "react-router-dom";
 
 const Details = () => {
   const { scrollYProgress } = useScroll();
@@ -63,54 +65,58 @@ const Details = () => {
   };
 
   return (
-    <motion.div
-      className="detail_container nana"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
-      variants={containerVariants}
-      style={{ opacity }}
-    >
-      <div className="detail_grid calap">
-        <motion.div className="detail_sub_grid nalla" style={{ y: textY }}>
-          <motion.h2 className="doto" variants={itemVariants}>
-            Sandy & Zaid
-          </motion.h2>
+    <div>
+      <motion.div
+        className="detail_container nana"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={containerVariants}
+        style={{ opacity }}
+      >
+        <div className="detail_grid calap">
+          <motion.div className="detail_sub_grid nalla" style={{ y: textY }}>
+            <motion.h2 className="doto" variants={itemVariants}>
+              Sandy & Zaid
+            </motion.h2>
 
-          <motion.p className="short" variants={itemVariants}>
-            You're Invited to the Best Day Ever!
-          </motion.p>
+            <motion.p className="dallapatah" variants={itemVariants}>
+              We would be delighted to have you celebrate with us!
+            </motion.p>
 
-          <motion.p className="other_p" variants={itemVariants}>
-            We're so excited to have you with us on our special day. Save the
-            date, bring your dancing shoes, and get ready to celebrate our
-            happily ever after!
-          </motion.p>
+            <motion.p className="other_p " variants={itemVariants}>
+              Kindly take a moment to let us know if you'll be attending by
+              completing the Rsvp section below. Your response is greatly
+              appriciated and helps us plan for a wonderful gathering.
+            </motion.p>
 
-          <motion.button
-            className="detail_btn"
-            variants={buttonVariants}
-            whileHover="hover"
-            whileTap="tap"
-          >
-            view details
-          </motion.button>
-        </motion.div>
+            <motion.button
+              className="detail_btn"
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
+            >
+              <Link to="/rsvp" className="a">
+                rsvp
+              </Link>
+            </motion.button>
+          </motion.div>
 
-        <motion.div className="detail_sub_grid" variants={imageVariants}>
-          <div className="imger">
-            <motion.img
-              src={detail}
-              alt="Couple"
-              className="detail_img"
-              style={{ scale: imageScale }}
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.5 }}
-            />
-          </div>
-        </motion.div>
-      </div>
-    </motion.div>
+          <motion.div className="detail_sub_grid" variants={imageVariants}>
+            <div className="imger">
+              <motion.img
+                src={detail}
+                alt="Couple"
+                className="detail_img"
+                style={{ scale: imageScale }}
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.5 }}
+              />
+            </div>
+          </motion.div>
+        </div>
+      </motion.div>
+    </div>
   );
 };
 

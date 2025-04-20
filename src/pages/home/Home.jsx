@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Link as ScrollLink } from "react-scroll";
+import { Link } from "react-router-dom";
 import "./home.css";
 import video from "../../video/videos.mov";
-import { Link } from "react-router-dom";
 
 const Home = () => {
   const { scrollYProgress } = useScroll();
@@ -60,12 +61,12 @@ const Home = () => {
     closed: { opacity: 1 },
   };
 
+  // Menu items configuration
   const menuItems = [
-    { name: "Invitation", path: "/invitation" },
-    { name: "Location", path: "/location" },
-    { name: "registry", path: "/registry" },
-    { name: "map", path: "/map" },
-    { name: "rsvp", path: "/rsvp" },
+    { name: "Invitation", target: "invitation", isScroll: true },
+    { name: "Location", target: "location", isScroll: true },
+    { name: "Registry", target: "registry", isScroll: true },
+    { name: "RSVP", target: "/rsvp", isScroll: false },
   ];
 
   return (
@@ -82,7 +83,7 @@ const Home = () => {
 
       <div className="home_contain">
         <div className="menu">
-          {/* Desktop Menu - hidden on mobile */}
+          {/* Desktop Menu */}
           <ul className="desktop-menu">
             {menuItems.map((item, i) => (
               <motion.li
@@ -93,9 +94,22 @@ const Home = () => {
                 animate="visible"
                 custom={i}
               >
-                <Link className="a" to={item.path}>
-                  {item.name}
-                </Link>
+                {item.isScroll ? (
+                  <ScrollLink
+                    className="a"
+                    to={item.target}
+                    smooth={true}
+                    duration={500}
+                    offset={-80} // Adjust this value based on your header height
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </ScrollLink>
+                ) : (
+                  <Link className="a" to={item.target}>
+                    {item.name}
+                  </Link>
+                )}
               </motion.li>
             ))}
           </ul>
@@ -123,21 +137,37 @@ const Home = () => {
               ×
             </button>
             <ul className="mobile-menu-list">
-              {["Invitation", "Location", "registry", "map", "rsvp"].map(
-                (item, i) => (
-                  <motion.li
-                    key={item}
-                    className="menu_li"
-                    variants={menuItemVariants}
-                    initial="hidden"
-                    animate="visible"
-                    custom={i}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item}
-                  </motion.li>
-                )
-              )}
+              {menuItems.map((item, i) => (
+                <motion.li
+                  key={item.name}
+                  className="menu_li"
+                  variants={menuItemVariants}
+                  initial="hidden"
+                  animate="visible"
+                  custom={i}
+                >
+                  {item.isScroll ? (
+                    <ScrollLink
+                      className="a"
+                      to={item.target}
+                      smooth={true}
+                      duration={500}
+                      offset={-80}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </ScrollLink>
+                  ) : (
+                    <Link
+                      className="a"
+                      to={item.target}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </motion.li>
+              ))}
             </ul>
           </motion.div>
         </div>
@@ -156,16 +186,18 @@ const Home = () => {
           }}
         >
           <motion.h2 className="couple_name" variants={nameVariants}>
-            S
+            Sandy
           </motion.h2>
           <motion.h2 className="couple_name austin" variants={nameVariants}>
             &
           </motion.h2>
           <motion.h2 className="couple_name" variants={nameVariants}>
-            Z
+            Zaid
           </motion.h2>
         </motion.div>
       </div>
+
+     
     </div>
   );
 };

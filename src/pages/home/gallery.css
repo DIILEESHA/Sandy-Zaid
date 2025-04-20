@@ -77,6 +77,15 @@
   margin-top: -70px;
   margin-bottom: -100px;
 }
+
+.view_p {
+  text-align: center;
+  font-family: "lato";
+  font-size: 20px;
+  padding: 50px 0;
+  width: 60%;
+  margin: 0 auto  ;
+}
 @media screen and (max-width: 840px) {
   .ho_ho {
     font-size: 45px;
@@ -99,5 +108,12 @@
   .ho_ho {
     font-size: 35px;
     width: 80%;
+  }
+
+  .view_p{
+    width: 90%;
+  }
+  .cccc{
+    height: 300px;
   }
 }

@@ -85,11 +85,19 @@
     width: 80%;
   }
 
-  .save_container,
   .home_section {
-    min-height: 150vh;
+    min-height: 130vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .save_container {
+    min-height: 130vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* height: auto; */
-    
   }
 
   .save_container {

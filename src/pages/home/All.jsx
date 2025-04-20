@@ -13,8 +13,8 @@ const All = () => {
     <div>
       {/* <Nav /> */}
       <Home />
-      <Details />
       <Save />
+      <Details />
       <Count />
       <Registry />
       <Gallery />

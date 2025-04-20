@@ -71,61 +71,63 @@ const Registry = () => {
   };
 
   return (
-    <motion.div
-      className="detail_container balla"
-      style={{ opacity }}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-50px" }}
-      variants={containerVariants}
-    >
-      <div className="detail_grid malap">
-        <motion.div className="detail_sub_grid nalla" style={{ y: textY }}>
-          <motion.h2 className="doto" variants={textVariants}>
-            Sandy & Zaid
-          </motion.h2>
+    <div id="registry" >
+      <motion.div
+        className="detail_container balla"
+        style={{ opacity }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={containerVariants}
+      >
+        <div className="detail_grid malap">
+          <motion.div className="detail_sub_grid nalla" style={{ y: textY }}>
+            <motion.h2 className="doto" variants={textVariants}>
+              Sandy & Zaid
+            </motion.h2>
 
-          <motion.p className="short" variants={textVariants}>
-            Your Presence is the Best Present
-          </motion.p>
+            <motion.p className="short" variants={textVariants}>
+              Your Presence is the Best Present
+            </motion.p>
 
-          <motion.p className="other_p" variants={textVariants}>
-            We're so grateful for your love and support. If you'd like to
-            contribute to our future together.
-          </motion.p>
+            <motion.p className="other_p" variants={textVariants}>
+              We're so grateful for your love and support. If you'd like to
+              contribute to our future together.
+            </motion.p>
 
-          <motion.button
-            className="detail_btn mlp"
-            variants={buttonVariants}
-            whileHover="hover"
-            whileTap="tap"
-          >
-            <a
-              href="https://registry.theknot.com/--june-2026-tx/72079552"
-              target="_blank"
-              className="a"
+            <motion.button
+              className="detail_btn mlp"
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
             >
-              gift registry
-            </a>
-          </motion.button>
-        </motion.div>
+              <a
+                href="https://registry.theknot.com/--june-2026-tx/72079552"
+                target="_blank"
+                className="a"
+              >
+                gift registry
+              </a>
+            </motion.button>
+          </motion.div>
 
-        <motion.div
-          className="detail_sub_grid"
-          variants={imageVariants}
-          whileHover="hover"
-        >
-          <div className="imger">
-            <motion.img
-              src={detail}
-              alt="Registry items"
-              className="detail_img"
-              style={{ scale: imageScale }}
-            />
-          </div>
-        </motion.div>
-      </div>
-    </motion.div>
+          <motion.div
+            className="detail_sub_grid"
+            variants={imageVariants}
+            whileHover="hover"
+          >
+            <div className="imger">
+              <motion.img
+                src={detail}
+                alt="Registry items"
+                className="detail_img"
+                style={{ scale: imageScale }}
+              />
+            </div>
+          </motion.div>
+        </div>
+      </motion.div>
+    </div>
   );
 };
 
