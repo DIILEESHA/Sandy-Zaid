@@ -166,7 +166,7 @@ const Rsvp = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
         >
-          by november 10
+          by June 10
         </motion.h3>
         <h3 
           className="form_below"
