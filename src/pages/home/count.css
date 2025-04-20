@@ -70,3 +70,41 @@
   font-family: "lato";
   font-size: 20px;
 }
+@media screen and (max-width: 1015px) {
+  .count_grid {
+    padding: 40px 20px;
+  }
+  .oi_img {
+    height: 60vh;
+  }
+}
+@media screen and (max-width: 799px) {
+  .count_time {
+    font-size: 80px;
+  }
+
+  .count_grid {
+    gap: 10px;
+  }
+  .oi_img {
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 667px) {
+  .count_time {
+    font-size: 80px;
+  }
+
+  .count_grid {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .oi_img {
+    height: 30vh;
+  }
+
+  .observe {
+    bottom: 20px;
+  }
+}

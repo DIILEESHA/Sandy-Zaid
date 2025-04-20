@@ -1,19 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "./home.css";
-import video from "../../video/video.mp4";
+import video from "../../video/videos.mov";
 
 const Home = () => {
   const { scrollYProgress } = useScroll();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  // Create various animated values based on scroll progress
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+      if (window.innerWidth > 550) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 1.2]);
   const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
-  const yPos = useTransform(scrollYProgress, [0, 0.5], [0, -100]);
   const rotate = useTransform(scrollYProgress, [0, 1], [0, 5]);
-  const textScale = useTransform(scrollYProgress, [0, 0.3], [1, 1.1]);
 
-  // Animation variants for staggered menu items
   const menuItemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i) => ({
@@ -27,7 +37,6 @@ const Home = () => {
     }),
   };
 
-  // Animation for the couple names
   const nameVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {
@@ -40,19 +49,14 @@ const Home = () => {
     },
   };
 
-  // Button hover animation
-  const buttonVariants = {
-    hover: {
-      scale: 1.05,
-      backgroundColor: "rgba(255,255,255,0.2)",
-      transition: {
-        duration: 0.3,
-        yoyo: Infinity,
-      },
-    },
-    tap: {
-      scale: 0.95,
-    },
+  const hamburgerVariants = {
+    open: { rotate: 90 },
+    closed: { rotate: 0 },
+  };
+
+  const lineVariants = {
+    open: { opacity: 0 },
+    closed: { opacity: 1 },
   };
 
   return (
@@ -64,16 +68,13 @@ const Home = () => {
         muted
         loop
         playsInline
-        style={{
-          scale,
-          opacity,
-          rotate,
-        }}
+        style={{ scale, opacity, rotate }}
       ></motion.video>
 
       <div className="home_contain">
         <div className="menu">
-          <ul className="menu_ul">
+          {/* Desktop Menu - hidden on mobile */}
+          <ul className="desktop-menu">
             {["save the date", "the details", "registry", "map", "rsvp"].map(
               (item, i) => (
                 <motion.li
@@ -89,32 +90,48 @@ const Home = () => {
               )
             )}
           </ul>
-        </div>
 
-        <motion.div
-          className="home_top"
-          style={{
-            y: yPos,
-            scale: textScale,
-          }}
-        >
-          <motion.h2
-            className="home_span"
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
+          {/* Hamburger button - only shows on mobile */}
+          <motion.button
+            className="hamburger"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            variants={hamburgerVariants}
+            animate={isMenuOpen ? "open" : "closed"}
           >
-            Our Forever
-          </motion.h2>
-          <motion.h2
-            className="home_span"
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            <motion.span variants={lineVariants} />
+            <motion.span variants={lineVariants} />
+            <motion.span variants={lineVariants} />
+          </motion.button>
+
+          {/* Mobile menu overlay */}
+          <motion.div
+            className={`mobile-menu ${isMenuOpen ? "open" : ""}`}
+            initial={{ x: "100%" }}
+            animate={{ x: isMenuOpen ? 0 : "100%" }}
+            transition={{ type: "tween" }}
           >
-            Begins Here
-          </motion.h2>
-        </motion.div>
+            <button className="close-btn" onClick={() => setIsMenuOpen(false)}>
+              ×
+            </button>
+            <ul className="mobile-menu-list">
+              {["save the date", "the details", "registry", "map", "rsvp"].map(
+                (item, i) => (
+                  <motion.li
+                    key={item}
+                    className="menu_li"
+                    variants={menuItemVariants}
+                    initial="hidden"
+                    animate="visible"
+                    custom={i}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item}
+                  </motion.li>
+                )
+              )}
+            </ul>
+          </motion.div>
+        </div>
 
         <motion.div
           className="couple_name_section"
@@ -138,17 +155,6 @@ const Home = () => {
           <motion.h2 className="couple_name" variants={nameVariants}>
             Z
           </motion.h2>
-        </motion.div>
-
-        <motion.div className="rsvp_now">
-          <motion.button
-            className="rsvp_btn"
-            variants={buttonVariants}
-            whileHover="hover"
-            whileTap="tap"
-          >
-            rsvp now
-          </motion.button>
         </motion.div>
       </div>
     </div>

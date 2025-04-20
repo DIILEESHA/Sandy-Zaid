@@ -77,3 +77,27 @@
   margin-top: -70px;
   margin-bottom: -100px;
 }
+@media screen and (max-width: 840px) {
+  .ho_ho {
+    font-size: 45px;
+  }
+
+  .gallery_container {
+    padding: 40px 20px;
+  }
+}
+
+@media screen and (max-width: 773px) {
+  .gttt {
+    margin: 0;
+    width: 100%;
+    height: 50vh;
+    object-fit: contain;
+  }
+}
+@media screen and (max-width: 640px) {
+  .ho_ho {
+    font-size: 35px;
+    width: 80%;
+  }
+}

@@ -11,7 +11,7 @@ import Nav from "../../components/nav/Nav";
 const All = () => {
   return (
     <div>
-      <Nav />
+      {/* <Nav /> */}
       <Home />
       <Details />
       <Save />

@@ -79,3 +79,28 @@
   text-align: center;
   margin: 10px auto;
 }
+@media screen and (max-width: 595px) {
+  .names {
+    font-size: 40px;
+    width: 80%;
+  }
+  .verse {
+    font-size: 25px;
+    width: 80%;
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  .invite_text{
+    width: 90%;
+    margin: 40px auto;
+  }
+}
+@media screen and (max-width: 465px) {
+  .names {
+    text-align: center;
+    margin: 10px auto;
+    font-size: 37px !important;
+    width: 80%;
+  }
+}
