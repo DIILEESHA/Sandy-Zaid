@@ -175,6 +175,12 @@
     font-size: 30px;
   }
 
+  .couple_name_section {
+    gap: 15px;
+    display: flex;align-items: center;
+    justify-content: center;
+  }
+
   /* Hide desktop menu on mobile */
   .desktop-menu {
     display: none;

@@ -84,7 +84,7 @@
   font-size: 20px;
   padding: 50px 0;
   width: 60%;
-  margin: 0 auto  ;
+  margin: 0 auto;
 }
 @media screen and (max-width: 840px) {
   .ho_ho {
@@ -110,10 +110,10 @@
     width: 80%;
   }
 
-  .view_p{
-width: 90%;
+  .view_p {
+    width: 90%;
   }
-  .cccc{
+  .cccc {
     height: 300px;
   }
 }
