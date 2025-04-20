@@ -139,12 +139,17 @@ const Save = () => {
           
           <motion.p className="invite_text" variants={textVariants}>
             Invite you to celebrate our wedding
-            {/* <br /> */}
-            Thursday 28 August 2025 at 5:30 pm
-            {/* <br /> */}
+            <br />
+            <br/>
+       August | 28 | 2025
+            <br />
+            Five thirty in the afternoon
+            <br/>
             The ceremony and dinner will take place at
-            {/* <br /> */}
-            Pleine Lune Venue, Faitroun, Lebanon.
+            <br />
+            Pleine Lune Venue
+            <br/>
+             Faitroun, Lebanon.
           </motion.p>
         </motion.div>
       </div>
