@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "./home.css";
 import video from "../../video/videos.mov";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const { scrollYProgress } = useScroll();
@@ -59,6 +60,14 @@ const Home = () => {
     closed: { opacity: 1 },
   };
 
+  const menuItems = [
+    { name: "Invitation", path: "/invitation" },
+    { name: "Location", path: "/location" },
+    { name: "registry", path: "/registry" },
+    { name: "map", path: "/map" },
+    { name: "rsvp", path: "/rsvp" },
+  ];
+
   return (
     <div className="video_container">
       <motion.video
@@ -75,20 +84,20 @@ const Home = () => {
         <div className="menu">
           {/* Desktop Menu - hidden on mobile */}
           <ul className="desktop-menu">
-            {["Invitation", "Location", "registry", "map", "rsvp"].map(
-              (item, i) => (
-                <motion.li
-                  key={item}
-                  className="menu_li"
-                  variants={menuItemVariants}
-                  initial="hidden"
-                  animate="visible"
-                  custom={i}
-                >
-                  {item}
-                </motion.li>
-              )
-            )}
+            {menuItems.map((item, i) => (
+              <motion.li
+                key={item.name}
+                className="menu_li"
+                variants={menuItemVariants}
+                initial="hidden"
+                animate="visible"
+                custom={i}
+              >
+                <Link className="a" to={item.path}>
+                  {item.name}
+                </Link>
+              </motion.li>
+            ))}
           </ul>
 
           {/* Hamburger button - only shows on mobile */}
