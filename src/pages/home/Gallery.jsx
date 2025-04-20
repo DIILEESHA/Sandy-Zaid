@@ -102,27 +102,7 @@ const Gallery = () => {
         </Marquee>
       </motion.div>
 
-      <motion.div className="line" variants={lineVariants} />
-
-      <motion.p
-        className="actual_place"
-        variants={itemVariants}
-        transition={{ delay: 0.2 }}
-      >
-        <motion.span className="pxx" whileHover={{ scale: 1.05 }}>
-          Pleine Lune Venue
-        </motion.span>
-        <br /> Faitroun, Lebanon.
-      </motion.p>
-
-      <img
-        className="gttt"
-        src={cb}
-        alt=""
-        // variants={itemVariants}
-        // transition={{ delay: 0.3 }}
-        // whileHover={{ rotate: 5 }}
-      />
+  
     </motion.div>
   );
 };

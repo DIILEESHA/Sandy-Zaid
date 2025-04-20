@@ -91,7 +91,7 @@ const Registry = () => {
 
           <motion.p className="other_p" variants={textVariants}>
             We're so grateful for your love and support. If you'd like to
-            contribute to our future together, here's a peek at our wish list.
+            contribute to our future together.
           </motion.p>
 
           <motion.button
@@ -105,7 +105,7 @@ const Registry = () => {
               target="_blank"
               className="a"
             >
-              shop our registry
+              gift registry
             </a>
           </motion.button>
         </motion.div>

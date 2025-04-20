@@ -179,16 +179,7 @@ function Count() {
 
       </motion.div>
         {/* Wedding Date Display */}
-        <motion.div
-          className="wedding_date_display"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
-        >
-          <h3 className="maha">Thursday, 28 August 2025</h3>
-          <p className="naha">5:30 PM | Pleine Lune Venue, Faitroun, Lebanon</p>
-        </motion.div>
+     
     </motion.div>
   );
 }

@@ -11,6 +11,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "aston";
+  src: url("../fonts/aston.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 .a {
   text-decoration: none;

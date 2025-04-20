@@ -75,7 +75,7 @@ const Home = () => {
         <div className="menu">
           {/* Desktop Menu - hidden on mobile */}
           <ul className="desktop-menu">
-            {["save the date", "the details", "registry", "map", "rsvp"].map(
+            {["Invitation", "Location", "registry", "map", "rsvp"].map(
               (item, i) => (
                 <motion.li
                   key={item}
@@ -114,7 +114,7 @@ const Home = () => {
               ×
             </button>
             <ul className="mobile-menu-list">
-              {["save the date", "the details", "registry", "map", "rsvp"].map(
+              {["Invitation", "Location", "registry", "map", "rsvp"].map(
                 (item, i) => (
                   <motion.li
                     key={item}
