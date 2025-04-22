@@ -71,7 +71,7 @@ const Registry = () => {
   };
 
   return (
-    <div id="registry" >
+    <div id="registry">
       <motion.div
         className="detail_container balla"
         style={{ opacity }}
@@ -82,15 +82,14 @@ const Registry = () => {
       >
         <div className="detail_grid malap">
           <motion.div className="detail_sub_grid nalla" style={{ y: textY }}>
-           
-
             <motion.p className="short" variants={textVariants}>
               Your Presence is the Best Present
             </motion.p>
 
             <motion.p className="other_p" variants={textVariants}>
-              We're so grateful for your love and support. If you'd like to
-              contribute to our future together.
+              Your Presence at our wedding is the most meaningful gift.We're so
+              greatful for your love and support. For those who whish to give a
+              gift, a registry is available.
             </motion.p>
 
             <motion.button
