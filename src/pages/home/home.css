@@ -52,6 +52,7 @@
   font-weight: 300;
   font-size: 80px;
   font-family: "aston";
+  text-align: center;
 }
 
 .saz {
@@ -174,7 +175,8 @@
 
 /* Responsive Styles */
 @media screen and (max-width: 880px) {
-  .couple_name,.demontitle {
+  .couple_name,
+  .demontitle {
     font-size: 50px;
   }
 
@@ -189,8 +191,13 @@
 }
 
 @media screen and (max-width: 550px) {
-  .couple_name,.demontitle {
+  .couple_name,
+  .demontitle {
     font-size: 30px;
+  }
+
+  .demontitle{
+    margin-right: 30px;
   }
 
   .couple_name_section {
