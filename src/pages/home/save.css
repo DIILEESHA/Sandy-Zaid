@@ -54,13 +54,16 @@
 
 .we,
 .and {
-  font-family: "lato";
+  font-family: "ebg";
   font-size: 30px;
   line-height: 0;
   font-weight: 300;
   opacity: 90%;
   margin-bottom: 30px;
 }
+
+
+.we{}
 
 .and,
 .invite_text {

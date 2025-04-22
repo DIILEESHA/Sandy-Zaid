@@ -68,9 +68,9 @@ const Gallery = () => {
       viewport={{ once: true, margin: "-50px" }}
       variants={containerVariants}
     >
-      <motion.h2 className="ho_ho" variants={itemVariants}>
+      {/* <motion.h2 className="ho_ho" variants={itemVariants}>
         Sandy & Zaid
-      </motion.h2>
+      </motion.h2> */}
 
       <motion.div className="gallery_con" variants={itemVariants}>
         <Marquee
@@ -103,7 +103,7 @@ const Gallery = () => {
       </motion.div>
 
       <p className="view_p" id="location">
-        The church ceremony, welcome drinks and dinner will take place at
+        The church ceremony, welcome drink and dinner will take place at
         <br />
         <br />
         <b>Pleine Lune venue, Faitroun, Lebanon</b>

@@ -4,10 +4,12 @@
   padding: 80px 100px;
 }
 .ho_ho {
-  font-size: 70px;
+  font-size: 100px;
+  margin: 0 auto;
+  color: #fff;
   font-weight: 300;
   font-family: "candle";
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   text-align: center;
 }
 .gallery_con {
@@ -106,10 +108,10 @@
 }
 @media screen and (max-width: 640px) {
   .ho_ho {
-    font-size: 35px;
+    font-size: 45px;
     width: 80%;
   }
-  .gallery_sub_con{
+  .gallery_sub_con {
     height: 30vh;
   }
 

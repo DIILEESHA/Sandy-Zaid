@@ -64,9 +64,9 @@ const Home = () => {
   // Menu items configuration
   const menuItems = [
     { name: "Invitation", target: "invitation", isScroll: true },
+    { name: "RSVP", target: "/rsvp", isScroll: false },
     { name: "Location", target: "location", isScroll: true },
     { name: "Registry", target: "registry", isScroll: true },
-    { name: "RSVP", target: "/rsvp", isScroll: false },
   ];
 
   return (
@@ -185,19 +185,17 @@ const Home = () => {
             },
           }}
         >
-          <motion.h2 className="couple_name" variants={nameVariants}>
-            Sandy
+          <motion.h2 className="ho_ho" variants={nameVariants}>
+            Sandy & Zaid
           </motion.h2>
-          <motion.h2 className="couple_name austin" variants={nameVariants}>
+          {/* <motion.h2 className="couple_name austin" variants={nameVariants}>
             &
           </motion.h2>
           <motion.h2 className="couple_name" variants={nameVariants}>
             Zaid
-          </motion.h2>
+          </motion.h2> */}
         </motion.div>
       </div>
-
-     
     </div>
   );
 };
