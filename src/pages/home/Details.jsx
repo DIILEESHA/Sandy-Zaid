@@ -82,9 +82,9 @@ const Details = () => {
 
             <motion.p className="other_p " variants={itemVariants}>
               We would be delighted to have you celebrate with us! Kindly take a
-              moment to let us know if you'll be attending by completing the
-              Rsvp section in the link below. Your response is greatly
-              appriciated and helps us plan for a wonderful gathering.
+              moment to let us know if you’ll be attending by completing the
+              RSVP section in the link below. Your response is greatly
+              appreciated and helps us plan for a wonderful gathering.
             </motion.p>
 
             <motion.button

@@ -172,29 +172,7 @@ const Home = () => {
           </motion.div>
         </div>
 
-        <motion.div
-          className="couple_name_section"
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: {},
-            visible: {
-              transition: {
-                staggerChildren: 0.2,
-              },
-            },
-          }}
-        >
-          <motion.h2 className="ho_ho" variants={nameVariants}>
-            Sandy & Zaid
-          </motion.h2>
-          {/* <motion.h2 className="couple_name austin" variants={nameVariants}>
-            &
-          </motion.h2>
-          <motion.h2 className="couple_name" variants={nameVariants}>
-            Zaid
-          </motion.h2> */}
-        </motion.div>
+        <h3 className="demontitle">Sandy <span className="saz">&</span>  Zaid</h3>
       </div>
     </div>
   );

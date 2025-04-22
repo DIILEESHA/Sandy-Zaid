@@ -105,7 +105,7 @@ const Save = () => {
             </motion.p>
 
             <motion.p className="we" variants={textVariants}>
-              we
+              We
             </motion.p>
 
             <motion.h1
